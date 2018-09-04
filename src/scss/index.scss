@@ -1,2 +1,58 @@
 @import "_mixin.scss";
 @import "common.scss";
+.wrap {
+    @include num(100%, 100%);
+    @include box_flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: skyblue;
+}
+
+header,
+footer {
+    @include num(100%, rem(44px));
+}
+
+section {
+    flex: 1;
+    @include box_flex;
+    flex-direction: column;
+    overflow-y: auto;
+    label {
+        margin-top: rem(50px);
+        @include num(100%, auto);
+        text-align: center;
+        input {
+            @include num(60%, rem(33px));
+            border-radius: rem(5px);
+            margin-top: rem(10px);
+            background: #fff;
+            text-indent: rem(10px);
+        }
+        p {
+            @include flexs;
+            padding: 0 rem(80px);
+            margin-top: rem(20px);
+            @include sizing;
+            color: #eee;
+        }
+        button {
+            @include num(60%, rem(33px));
+            background: rgb(3, 121, 145);
+            border: 0;
+            color: #fff;
+            font-size: rem(14px);
+            margin-top: rem(20px);
+            border-radius: rem(5px);
+        }
+        div {
+            margin-top: rem(20px);
+            span {
+                color: #444;
+            }
+            b {
+                color: blue;
+            }
+        }
+    }
+}
